@@ -1,0 +1,25 @@
+{
+  "name": "custom-button",
+  "authors": [
+    "Glenn Vandeuren <vandeurenglenn@gmail.com>"
+  ],
+  "description": "",
+  "main": "custom-button.html",
+  "keywords": [
+    "custom-element",
+    "button"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "custom-ripple": "^0.1.0",
+    "backed": "^0.4.1"
+  }
+}
