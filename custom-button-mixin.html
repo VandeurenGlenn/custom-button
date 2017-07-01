@@ -5,13 +5,17 @@
 
 window.CustomButtonMixin = base => class extends base {
 	connected() {
-		this.onMouseDown = this.onMouseDown.bind(this); // Bind method
-		this.onMouseUp = this.onMouseUp.bind(this); // Bind method
-		this.onMouseClick = this.onMouseClick.bind(this); // Bind method
+    this.onMouseDown = this.onMouseDown.bind(this); // Bind method
+    this.onMouseUp = this.onMouseUp.bind(this); // Bind method
+    this.onMouseClick = this.onMouseClick.bind(this); // Bind method
+    this.onMouseOver = this.onMouseOver.bind(this); // Bind method
+    this.onMouseOut = this.onMouseOut.bind(this); // Bind method
 
 		this.addEventListener('mousedown', this.onMouseDown);
 		this.addEventListener('mouseup', this.onMouseUp);
 		this.addEventListener('click', this.onMouseClick);
+    this.addEventListener('mouseover', this.onMouseOver);
+    this.addEventListener('mouseout', this.onMouseOut);
 	}
 
 	get ripple() {
@@ -50,6 +54,13 @@ window.CustomButtonMixin = base => class extends base {
 		this.ripple.run();
 	}
 
+  onMouseOver() {
+    this.classList.add('focus');
+  }
+
+  onMouseOut() {
+    this.classList.remove('focus');
+  }
 
 	/**
 	 * @return {Boolean}
