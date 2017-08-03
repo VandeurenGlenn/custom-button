@@ -8,6 +8,7 @@
     	position: relative;
     	padding: var(--custom-button-padding, 8px);
     	align-items: center;
+	justify-content: center;
     	max-height:  56px;
     	border-radius: var(--custom-button-radius, 3px);
     	text-transform: uppercase;
@@ -44,8 +45,8 @@
 */
 Backed(class CustomButton extends CustomButtonMixin(HTMLElement) {
   ready() {
-  	const ripple = document.createElement('custom-ripple');
-  	this.shadowRoot.appendChild(ripple);
+	const ripple = document.createElement('custom-ripple');
+	this.shadowRoot.appendChild(ripple);
   }
 
   /**
