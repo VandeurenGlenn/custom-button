@@ -16,6 +16,13 @@ window.CustomButtonMixin = base => class extends base {
 		this.addEventListener('click', this.onMouseClick);
     this.addEventListener('mouseover', this.onMouseOver);
     this.addEventListener('mouseout', this.onMouseOut);
+    if (!this.noShadow) {
+	this.classList.add('has-shadow');
+    }
+	}
+	
+	get noShadow() {
+		return this.hasAttribute('no-shadow');
 	}
 
 	get ripple() {
@@ -30,6 +37,7 @@ window.CustomButtonMixin = base => class extends base {
 	 * Add's mousedown to classList
 	 */
 	onMouseDown() {
+		if (!this.noShadow) { this.classList.remove('has-shadow') };
 		this.classList.add('mousedown');
 	}
 
@@ -37,6 +45,7 @@ window.CustomButtonMixin = base => class extends base {
 	 * Set's boxShadow=none & removes mousedown from the classList
 	 */
 	onMouseUp() {
+		if (!this.noShadow) { this.classList.add('has-shadow') };
 		this.classList.remove('mousedown');
 	}
 
