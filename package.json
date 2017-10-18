@@ -1,0 +1,13 @@
+{
+  "name": "custom-button",
+  "version": "0.9.0",
+  "main": "custom-button.js",
+  "repository": "https://github.com/VandeurenGlenn/custom-button.git",
+  "author": "VandeurenGlenn <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "flat": true,
+  "dependencies": {
+    "backed": "^0.9.3",
+    "custom-ripple": "^0.9.0"
+  }
+}
