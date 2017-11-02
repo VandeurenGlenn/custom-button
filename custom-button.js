@@ -130,6 +130,7 @@ define(class CustomButton extends LitMixin(HTMLElement) {
         user-select: none;
         cursor: pointer;
         border: none;
+        pointer-events: none;
       	box-sizing: border-box;
 
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
