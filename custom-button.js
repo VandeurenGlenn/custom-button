@@ -1,6 +1,6 @@
 import { define } from '../backed/src/utils.js';
 import LitMixin from '../backed/mixins/src/lit-mixin.js';
-import LitMixin from '../backed/mixins/src/property-mixin.js';
+import PropertyMixin from '../backed/mixins/src/property-mixin.js';
 import '../custom-ripple/custom-ripple.js';
 /**
 * @extends LitMixin
