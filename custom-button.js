@@ -1,24 +1,40 @@
 import { define } from '../backed/src/utils.js';
-import LitMixin from '../backed/mixins/lit-mixin.js';
+import LitMixin from '../backed/mixins/src/lit-mixin.js';
+import LitMixin from '../backed/mixins/src/property-mixin.js';
 import '../custom-ripple/custom-ripple.js';
 /**
 * @extends LitMixin
 */
-define(class CustomButton extends LitMixin(HTMLElement) {
-	connectedCallback() {
-    super.connectedCallback();
-    // Bind methods
+define(class CustomButton extends LitMixin(PropertyMixin(HTMLElement)) {
+	static get properties() {
+		return {}
+	}
+	constructor() {
+		super()
+		// Bind methods
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseUp = this.onMouseUp.bind(this);
     this.onMouseClick = this.onMouseClick.bind(this);
     this.onMouseOver = this.onMouseOver.bind(this);
     this.onMouseOut = this.onMouseOut.bind(this);
 
+	}
+	connectedCallback() {
+    super.connectedCallback();
 		this.addEventListener('mousedown', this.onMouseDown);
 		this.addEventListener('mouseup', this.onMouseUp);
 		this.addEventListener('click', this.onMouseClick);
     this.addEventListener('mouseover', this.onMouseOver);
     this.addEventListener('mouseout', this.onMouseOut);
+	}
+
+	disconnectedCallback() {
+    super.disconnectedCallback();
+		this.removeEventListener('mousedown', this.onMouseDown);
+		this.removeEventListener('mouseup', this.onMouseUp);
+		this.removeEventListener('click', this.onMouseClick);
+    this.removeEventListener('mouseover', this.onMouseOver);
+    this.removeEventListener('mouseout', this.onMouseOut);
 	}
 
 	get ripple() {
@@ -27,13 +43,6 @@ define(class CustomButton extends LitMixin(HTMLElement) {
 
 	get isLink() {
 		return this.hasAttribute('is-link');
-	}
-
-	/**
-	 * @return {Boolean}
-	 */
-	get stopPropagationDisabled() {
-		return this.hasAttribute('disable-stop-propagation');
 	}
 
   /**
@@ -61,9 +70,6 @@ define(class CustomButton extends LitMixin(HTMLElement) {
 	 * @param {Object} event
 	 */
 	onMouseClick(event) {
-		if (!this.stopPropagationDisabled) {
-			event.stopPropagation();
-		}
 		document.dispatchEvent(new CustomEvent(this.name)); // Fire event
 		if (this.isLink) {
 			window.location.hash = this.getAttribute('name');
