@@ -1,6 +1,6 @@
 {
   "name": "custom-button",
-  "version": "0.10.0-alpha.1",
+  "version": "0.10.0-alpha.3",
   "main": "custom-button.js",
   "repository": "https://github.com/VandeurenGlenn/custom-button.git",
   "author": "VandeurenGlenn <vandeurenglenn@gmail.com>",
