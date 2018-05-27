@@ -1,4 +1,4 @@
-import { define } from '../../backed/src/utils';
+import define  from '../../backed/src/utils/define.js';
 import RenderMixin from '../../custom-renderer-mixin/src/render-mixin';
 import PropertyMixin from '../../backed/src/mixins/property-mixin';
 import '../../custom-ripple/custom-ripple';

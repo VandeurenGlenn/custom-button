@@ -2,19 +2,17 @@
 # yarn lockfile v1
 
 
-backed@0.10.0-beta.1, backed@^0.10.0-beta.1, backed@^0.9.3:
-  version "0.10.0-beta.1"
-  resolved "https://registry.yarnpkg.com/backed/-/backed-0.10.0-beta.1.tgz#11caabdfc494db31e9441a0b90f31874dfb1eb91"
-  dependencies:
-    lit-html "^0.7.1"
+backed@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/backed/-/backed-0.12.1.tgz#213944b1e457e253a6390a4559ef24cba4228f6b"
 
 custom-html-tag@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/custom-html-tag/-/custom-html-tag-0.1.0.tgz#40f8ae757f71ff05c35318cfa27eecae50eeb634"
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/custom-html-tag/-/custom-html-tag-0.1.1.tgz#9a018c43eeab45a59c68bc760c6670921a4e579a"
 
-custom-renderer-mixin@^0.1.2:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/custom-renderer-mixin/-/custom-renderer-mixin-0.1.3.tgz#e4b8d13c4b43976d74dd8352d290f06ec645bf71"
+custom-renderer-mixin@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/custom-renderer-mixin/-/custom-renderer-mixin-0.1.5.tgz#ae1ff6f77d4fff99652d06f0ed827377c1179973"
   dependencies:
     custom-html-tag "^0.1.0"
     custom-renderer "^0.1.0"
@@ -23,12 +21,9 @@ custom-renderer@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/custom-renderer/-/custom-renderer-0.1.1.tgz#4a3ba91bfdc2bd543001b448d68e6445a67d5549"
 
-custom-ripple@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/custom-ripple/-/custom-ripple-0.9.0.tgz#9c0c1c4addaede1ccbee5899d1445afb05865be9"
+custom-ripple@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/custom-ripple/-/custom-ripple-0.11.0.tgz#4bc8ed5b9fe11570ba5f016e1789da86414ed2fc"
   dependencies:
-    backed "^0.9.3"
-
-lit-html@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.7.1.tgz#61785045cf84f9ee955fa078c2985b52b765ad16"
+    backed "0.12.0"
+    custom-renderer-mixin "^0.1.4"
