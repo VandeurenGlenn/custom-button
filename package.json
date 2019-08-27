@@ -5,13 +5,5 @@
   "repository": "https://github.com/VandeurenGlenn/custom-button.git",
   "author": "VandeurenGlenn <vandeurenglenn@gmail.com>",
   "license": "MIT",
-  "flat": true,
-  "dependencies": {
-    "backed": "^0.12.1",
-    "custom-renderer-mixin": "^0.1.5",
-    "custom-ripple": "0.11.0"
-  },
-  "resolutions": {
-    "backed": "0.12.1"
-  }
+  "flat": true
 }
