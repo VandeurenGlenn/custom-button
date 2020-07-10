@@ -6,6 +6,9 @@ export default customElements.define('custom-button', class CustomButton extends
 
     this.shadowRoot.innerHTML = `
     <style>
+      * {
+        pointer-events: none;
+      }
       :host {
         --shadow-elevation-0dp:
                     0 0px 0px 0 rgba(0, 0, 0, 0.14),
@@ -24,7 +27,6 @@ export default customElements.define('custom-button', class CustomButton extends
         border-radius: calc(var(--custom-button-height) / 3);
       }
       button {
-        pointer-events: show;
         display: block;
         width: 124px;
         height: var(--custom-button-height);
@@ -35,7 +37,6 @@ export default customElements.define('custom-button', class CustomButton extends
         text-transform: uppercase;
         background: transparent;
         color: #ddd;
-        cursor: pointer;
       }
       button:hover {
         box-shadow: var(--shadow-elevation-3dp);
@@ -52,5 +53,9 @@ export default customElements.define('custom-button', class CustomButton extends
     </style>
     <button><slot></slot></button>
     `
+  }
+  
+  connectedCallback() {
+    this.shadowRoot.querySelector('button')
   }
 })
